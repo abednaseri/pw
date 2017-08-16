@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.5.0)
+  - AlamofireNetworkActivityIndicator (2.2.0):
+    - Alamofire (~> 4.5)
+  - FZAccordionTableView (0.2.3)
+  - Hue (2.0.1)
+  - ImagePicker (2.1.1)
+  - Lightbox (1.0.0):
+    - Hue
+  - SlideMenuControllerSwift (3.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - AlamofireNetworkActivityIndicator (~> 2.0)
+  - FZAccordionTableView (~> 0.2.3)
+  - ImagePicker
+  - Lightbox
+  - SlideMenuControllerSwift
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
+  FZAccordionTableView: e64f49c71c32d750feda14025b088bcd25d1a71f
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  ImagePicker: fe4c699abb56ff03994fa98d8b02e3883ee118be
+  Lightbox: 13f55a0a840f7945dc5ac87931564e7fe569fca9
+  SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
+
+PODFILE CHECKSUM: d9714695eb3df3af2f04da474da01a9ac665d237
+
+COCOAPODS: 1.2.0

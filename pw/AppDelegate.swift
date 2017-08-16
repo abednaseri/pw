@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.creareMenuView()
         return true
     }
 
@@ -41,6 +43,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    
+    
+    
+    // Custom codes
+    
+    fileprivate func creareMenuView(){
+        // Create ViewController code
+        let storyboad = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainViewController = storyboad.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+        let leftViewController = storyboad.instantiateViewController(withIdentifier: "LeftVC") as! LeftVC
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        leftViewController.MainVC = nvc
+        
+        let slideMenuController = ExSlideMenuController(mainViewController: nvc, leftMenuViewController: leftViewController)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        slideMenuController.delegate = mainViewController as? SlideMenuControllerDelegate
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+        
+        UINavigationBar.appearance().backgroundColor = UIColor.gray
+    }
 
+    
+    
+    
+    
+    
+    
+    
 }
+
+
+
+
+
+
 
